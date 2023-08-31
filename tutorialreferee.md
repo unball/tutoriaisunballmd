@@ -1,4 +1,4 @@
-###coisas pra fazer antes de instalar o referee
+#Coisas do referee
 
 antes de tudo dá um
 update e um upgrade por boas práticas
@@ -6,6 +6,7 @@ update e um upgrade por boas práticas
 ```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
+#instalar requisitos
 
 #instalar o g++ no ubuntu
 
@@ -13,13 +14,20 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt install build-essential
 ```
 
-#instale o qt5  
+#instale o qt5
 
-siga os passos aqui, crie uma conta (necessário) e faça o chmod e instale 
-//pra baixar nem precisa dar wget basta clicar em cima que irá baixar, enfim faça como achar melhor 
-https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run -> versão que está lá atualmente
+```
+wget https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
+chmod +x qt-opensource-linux-x64-5.7.0.run ./qt-opensource-linux-x64-5.7.0.run
 
-https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+#pré requisitos do gt5
+sudo apt-get install build-essential
+sudo apt-get install libfontconfig1
+sudo apt-get install mesa-common-dev
+sudo apt-get install libglu1-mesa-dev -y
+sudo update-mime-database /usr/share/mime
+```
+caso tenha dado problema acesse: https://wiki.qt.io/Install_Qt_5_on_Ubuntu
 
 depois execute os seguintes comandos
 ```bash
@@ -39,14 +47,11 @@ sudo apt-get install autoconf automake libtool curl make g++ unzip
 
 curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protobuf-all-3.12.4.tar.gz
 
-tar -xf protobuf-all-3.6.1.tar.gz
+tar -xf protobuf-all-3.12.4.tar.gz
 
 cd protobuf-3.12.4/
 
 ./autogen.sh
-
-cd src/
-
 ./configure
 make
 make check
@@ -61,16 +66,18 @@ sudo ldconfig
 sudo apt-get install git build-essential cmake qt5-default libqt5opengl5-dev libgl1-mesa-dev libglu1-mesa-dev libprotobuf-dev protobuf-compiler libode-dev libboost-dev
 ```
 
-agora faça o que se pede no readme do e execute tudo
+agora faça o que dê um git clone vssreferee do e execute tudo
+https://github.com/robocin/VSSReferee/
 
-https://github.com/robocin/VSSReferee/ 
+lembrando que a branch é SSL-VISION-PACKETS
 
-lembrando que a branch é SSL-ALGUMA-COISA
 ```bash
-git checkout branch-name
+git clone https://github.com/robocin/VSSReferee.git
+git checkout SSL-VISION-PACKETS
 ```
 
 ```bash
+cd VSSReferee/
 mkdir build && cd build
 qmake ..
 make -j6
