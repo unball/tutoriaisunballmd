@@ -1,5 +1,7 @@
 #Coisas do referee
 
+Tente executar um comando por linha pra se der erro ao menos saber o que foi
+
 antes de tudo dá um
 update e um upgrade por boas práticas
 
