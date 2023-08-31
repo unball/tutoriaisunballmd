@@ -1,4 +1,4 @@
-###coisas pra fazer antes de instalar o referee OU O FIRASIM
+###coisas pra fazer antes de instalar o referee
 
 antes de tudo dá um
 update e um upgrade por boas práticas
@@ -29,64 +29,29 @@ sudo apt-get install qtdeclarative5-dev
 
 #se voce fez tudo que precisava no passo anterior openGL do QT veio junto 
 
-#vai pro /bin e faz essas coisas aqui pra instalar o protobuf (parte que mais da merda)
-
-### Remove old versions
-```bash
-  sudo rm -rf /usr/include/google/protobuf
-  sudo rm -rf /usr/lib/libprotobuf*
-  sudo rm -rf /usr/bin/proto*
-  sudo rm -rf /usr/local/include/google/protobuf
-  sudo rm -rf /usr/local/lib/libprotobuf*
-  sudo rm -rf /usr/local/bin/proto*
-```
-
-
 ```bash
 sudo apt-get install autoconf automake libtool curl make g++ unzip
 ```
 
-
-### Install protoc3
+### Install protobuf-all-3.12.4
 
 ```bash
-#! /bin/bash
-# Make sure you grab the latest version
-sudo curl -OL https://github.com/google/protobuf/releases/download/v3.6.1/protoc-3.6.1-linux-x86_64.zip
 
-# Unzip
-sudo unzip protoc-3.6.1-linux-x86_64.zip -d protoc3
+curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.12.4/protobuf-all-3.12.4.tar.gz
 
-# Move protoc to /usr/local/bin/
-sudo cp -r protoc3/bin/* /usr/local/bin/
+tar -xf protobuf-all-3.6.1.tar.gz
 
-# Move protoc3/include to /usr/local/include/
-sudo cp -r protoc3/include/* /usr/local/include/
+cd protobuf-3.12.4/
 
-# Optional: change owner
-sudo chown $USER /usr/local/bin/protoc
-sudo chown -R $USER /usr/local/include/google
+./autogen.sh
 
-sudo ldconfig
-```
+cd src/
 
-### Install libprotobuf
-```bash
-
-# Make sure you grab the latest version
-sudo curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-all-3.6.1.zip
-
-# Unzip
-sudo unzip protobuf-all-3.6.1.zip -d protobuf-all
-cd protobuf-all/protobuf-3.6.1
-
-# Installation
-
-sudo ./configure
-sudo make -j 4
-sudo make check
+./configure
+make
+make check
 sudo make install
-sudo ldconfig
+sudo ldconfig 
 ```
 
 #PRONTO :D em teoria tudo certo
@@ -101,3 +66,13 @@ agora faça o que se pede no readme do e execute tudo
 https://github.com/robocin/VSSReferee/ 
 
 lembrando que a branch é SSL-ALGUMA-COISA
+```bash
+git checkout branch-name
+```
+
+```bash
+mkdir build && cd build
+qmake ..
+make -j6
+```
+
