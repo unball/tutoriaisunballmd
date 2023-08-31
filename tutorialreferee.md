@@ -22,7 +22,7 @@ sudo apt install build-essential
 wget https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
 chmod +x qt-opensource-linux-x64-5.7.0.run ./qt-opensource-linux-x64-5.7.0.run
 
-#pré requisitos do gt5
+#para o funcionamento do qt5
 sudo apt-get install build-essential
 sudo apt-get install libfontconfig1
 sudo apt-get install mesa-common-dev
