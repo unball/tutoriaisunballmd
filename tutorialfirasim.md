@@ -25,7 +25,7 @@ $ make
 $ sudo make install
 ```
 
-#### Installing QT5
+#### Installing QT5 (Passo não necessário caso já tenha feito a instalação do Referee)
 
 ```
 wget https://download.qt.io/new_archive/qt/5.7/5.7.0/qt-opensource-linux-x64-5.7.0.run
@@ -40,7 +40,7 @@ sudo apt-get install qtbase5-dev
 sudo apt-get install qtdeclarative5-dev
 ```
 
-#### Installing protobuf-all-3.12.4
+#### Instalando o protobuf-all-3.12.4 (Passo não necessário caso já tenha feito a instalação do Referee)
 
 ```bash
 
