@@ -7,9 +7,9 @@ cd vss-vision/
 git checkout new-pattern
 ```
 Install docker
-```bash
-Plz install docker [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
-```
+
+Please, install docker [here:](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04)
+
 ## Dependecies
 ```
 Qt5
