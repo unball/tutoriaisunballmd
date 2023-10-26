@@ -3,6 +3,7 @@
 Clone the repository and go to the most recent branch 
 ```bash
 git clone https://github.com/robocin/vss-vision
+cd vss-vision/
 git checkout new-pattern
 ```
 ## Dependecies
