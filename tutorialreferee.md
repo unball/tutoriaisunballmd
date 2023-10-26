@@ -77,11 +77,8 @@ Lembrando que a branch é ```SSL-VISION-PACKETS```
 
 ```bash
 git clone https://github.com/robocin/VSSReferee.git
-git checkout SSL-VISION-PACKETS
-```
-
-```bash
 cd VSSReferee/
+git checkout SSL-VISION-PACKETS
 mkdir build && cd build
 qmake ..
 make -j6
