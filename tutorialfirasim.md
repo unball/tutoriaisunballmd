@@ -5,11 +5,9 @@
 ### Instação de Dependências
 
 ```bash
-sudo apt-get install git build-essential cmake qt5-default mesa-common-dev libqt5opengl5-dev libgl1-mesa-dev libglu1-mesa-dev libprotobuf-dev protobuf-compiler libode-dev libboost-dev freeglut3-dev libfontconfig1
-sudo apt install libode-dev
-sudo apt-get -y install cmake
-sudo apt-get install libglu1-mesa-dev -y
-sudo update-mime-database /usr/share/mime
+
+sudo apt-get install git && sudo apt-get install libprotobuf-dev && sudo apt-get install -y libglu1-mesa-dev && sudo apt-get install libgl1-mesa-dev && sudo apt-get install libqt5opengl5-dev && sudo apt-get install mesa-common-dev && sudo apt-get install qt5-default && sudo apt-get -y install cmake && sudo apt-get install build-essential && sudo apt-get install protobuf-compiler && sudo apt-get install libode-dev && sudo apt-get install libboost-dev && sudo apt-get install freeglut3-dev && sudo apt-get install libfontconfig1 && sudo update-mime-database /usr/share/mime
+
 ```
 
 Install VarTypes de uma fork de um membro do VSSS.
