@@ -8,6 +8,7 @@ sudo apt-get install libopencv-dev
 sudo apt-get install libeigen3-dev
 make 
 make install_test_data
+sudo make run #to run with the test data 
 ```
 
 a partir desse ponto você pode só dar sudo ./bin/vision ou make run
