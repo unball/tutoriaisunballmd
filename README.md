@@ -1,6 +1,6 @@
 # Tutorials for SSL and VSSS needed branches
 
-This repository contain tutorials to the main needed branches into the VSSS/SSL needed packages, they are:
+This repository contain tutorials to the main needed softwares into the VSSS/SSL needed packages, they are:
 
 # SSL
 * SSL [SSL-Vision](tutorialsslvision.md)
